@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<title>Megha Chauhan</title>
+<style>
+  :root{
+    --ink:#1a1a1a;
+    --muted:#6b6b6b;
+    --bg:#ffffff;
+    --line:#e8e8e8;
+    --gap: 28px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* --- Header / Nav --- */
+  header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 20px 40px;
+    border-bottom:1px solid var(--line);
+    position:sticky;
+    top:0;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter: blur(6px);
+    z-index:10;
+  }
+  .logo{
+    font-weight:600;
+    font-size:15px;
+    letter-spacing:0.02em;
+    text-decoration:none;
+    color:var(--ink);
+  }
+  nav ul{
+    list-style:none;
+    display:flex;
+    gap:32px;
+    margin:0;
+    padding:0;
+    font-size:14px;
+  }
+  nav a{
+    text-decoration:none;
+    color:var(--ink);
+    position:relative;
+  }
+  nav a:hover{ color:var(--muted); }
+  .has-dropdown{ position:relative; }
+  .dropdown{
+    display:none;
+    position:absolute;
+    top:24px;
+    left:0;
+    background:#fff;
+    border:1px solid var(--line);
+    padding:10px 0;
+    min-width:280px;
+    box-shadow:0 8px 24px rgba(0,0,0,0.06);
+  }
+  .has-dropdown:hover .dropdown{ display:block; }
+  .dropdown a{
+    display:block;
+    padding:8px 18px;
+    font-size:13px;
+    color:var(--ink);
+  }
+  .dropdown a:hover{ background:#f7f7f7; }
+
+  /* --- Grid gallery --- */
+  main{ padding: 48px 40px 80px; }
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+  }
+  @media (max-width: 900px){ .grid{ grid-template-columns: repeat(2,1fr);} }
+  @media (max-width: 560px){ .grid{ grid-template-columns: 1fr;} }
+
+  .tile{ text-decoration:none; color:var(--ink); display:block; }
+  .thumb{
+    width:100%;
+    aspect-ratio: 4/3;
+    border-radius:2px;
+    overflow:hidden;
+    background:#f0efec;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+  }
+  /* placeholder pattern -- swap this block out for a real <img> */
+  .thumb .placeholder-label{
+    font-size:12px;
+    color:#b3b0aa;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+  }
+  .thumb img{
+    width:100%; height:100%; object-fit:cover;
+    transition: transform .5s ease;
+  }
+  .tile:hover img{ transform: scale(1.03); }
+
+  .caption{
+    margin-top:10px;
+    font-style:italic;
+    font-size:14px;
+    color:var(--muted);
+  }
+
+  footer{
+    padding:24px 40px;
+    border-top:1px solid var(--line);
+    font-size:12px;
+    color:var(--muted);
+    text-align:center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="index.html">MEGHA CHAUHAN</a>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="publications.html">Publications / Conferences / Talks</a></li>
+      <li class="has-dropdown">
+        <a href="index.html">Work</a>
+        <div class="dropdown">
+          <a href="work/make-a-mark.html">Make a Mark: Community Couture</a>
+          <a href="work/ma-thesis.html">MA Thesis: Cultural and Creative Identity of Artisans</a>
+          <a href="work/rgb.html">RGB: A New Gender</a>
+          <a href="work/derm.html">Derm</a>
+          <a href="work/walthamstow.html">Walthamstow Clothing, Community and Stories</a>
+          <a href="work/these-r-mine.html">These 'R' Mine</a>
+          <a href="work/begumpur.html">Begumpur Craft Cluster</a>
+          <a href="work/not-about-love.html">Not About Love</a>
+          <a href="work/internship.html">Industry Internship</a>
+          <a href="work/collage.html">Mixed Media Art/Collage</a>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="grid">
+
+    <a class="tile" href="work/make-a-mark.html">
+      <div class="thumb"><span class="placeholder-label">image</span></div>
+      <div class="caption">Make a Mark: Community Couture</div>
+    </a>
+
+    <a class="tile" href="work/ma-thesis.html">
+      <div class="thumb"><span class="placeholder-label">image</span></div>
+      <div class="caption">MA Thesis</div>
+    </a>
+
+    <a class="tile" href="work/rgb.html">
+      <div class="thumb"><span class="placeholder-label">image</span></div>
+      <div class="caption">RGB: A New Gender</div>
+    </a>
+
+    <a class="tile" href="work/derm.html">
+      <div class="thumb"><span class="placeholder-label">image</span></div>
+      <div class="caption">Derm</div>
+    </a>
+
+    <a class="tile" href="work/walthamstow.html">
+      <div class="thumb"><span class="placeholder-label">image</span></div>
+      <div class="caption">Walthamstow. Clothing. Community. Stories.</div>
+    </a>
+
+    <a class="tile" href="work/these-r-mine.html">
+      <div class="thumb"><span class="placeholder-label">image</span></div>
+      <div class="caption">These 'R' Mine</div>
+    </a>
+
+    <a class="tile" href="work/begumpur.html">
+      <div class="thumb"><span class="placeholder-label">image</span></div>
+      <div class="caption">Begumpur Craft Cluster</div>
+    </a>
+
+    <a class="tile" href="work/not-about-love.html">
+      <div class="thumb"><span class="placeholder-label">image</span></div>
+      <div class="caption">Not About Love</div>
+    </a>
+
+    <a class="tile" href="work/internship.html">
+      <div class="thumb"><span class="placeholder-label">image</span></div>
+      <div class="caption">Industry Internship</div>
+    </a>
+
+    <a class="tile" href="work/collage.html">
+      <div class="thumb"><span class="placeholder-label">image</span></div>
+      <div class="caption">Mixed Media Art/Collage</div>
+    </a>
+
+  </div>
+</main>
+
+<footer>Megha Chauhan | 2026</footer>
+
+</body>
+</html>
